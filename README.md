@@ -28,9 +28,9 @@ The provided scripts are all functionally identical *except* for the **GPU encod
 
 | Script File | Target GPU Encoder | Hardware |
 | :--- | :--- | :--- |
-| `pure.ps1` / `last.ps1` | `hevc_qsv` | **Intel** (Quick Sync Video) |
-| `pureN.ps1` | `hevc_nvenc` | **NVIDIA** (NVENC) |
-| `macos.ps1` | `hevc_toolbox` | **Apple** (VideoToolbox) |
+| `kaizen_qsv.ps1` | `hevc_qsv` | **Intel** (Quick Sync Video) |
+| `kaizen_nvenc.ps1` | `hevc_nvenc` | **NVIDIA** (NVENC) |
+| `kaizen_macos.ps1` | `hevc_toolbox` | **Apple** (VideoToolbox) |
 
 **⚠️ Important Note on `macos.ps1`:** This script is contradictory. While it targets Apple's `hevc_toolbox` encoder, the rest of the script (especially the "Keep Awake" P/Invoke function for `Kernel32.dll`) is **Windows-specific**. This script will **not** run on macOS as-is and will fail on Windows unless you have a custom FFmpeg build. It appears to be an incomplete or experimental version. (Sidenote: I got it to work on Apple laptops but now I dont' have the source code. I'll find it and get back to updating this repo ASAP.)
 
